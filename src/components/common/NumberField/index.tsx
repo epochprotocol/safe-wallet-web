@@ -12,6 +12,12 @@ export const _formatNumber = (value: string) => {
 
   // Replace commas with dots
   value = value.replace(/,/g, '.')
+  let index = 0
+  // replace all dots except the first one
+  value = value.replace(/\./g, (item) => (!index++ ? item : ''))
+
+  // Remove all characters except numbers and dots
+  value = value.replace(/[^0-9.]/g, '')
 
   // Remove leading zeros from the string
   value = value.replace(/^0+/, '')

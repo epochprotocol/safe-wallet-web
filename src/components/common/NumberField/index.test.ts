@@ -14,7 +14,6 @@ describe('NumberField', () => {
   it('should replace , with .', () => {
     expect(_formatNumber('123,456')).toBe('123.456')
     expect(_formatNumber('00,3')).toBe('0.3')
-    // note: this is not a valid number, but it's the expected behavior
-    expect(_formatNumber('123,456.789')).toBe('123.456.789')
+    expect(_formatNumber('123,456.789')).toBe('123.456789')
   })
 })
