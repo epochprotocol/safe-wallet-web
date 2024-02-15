@@ -1,5 +1,3 @@
-import { CYPRESS_MNEMONIC, IS_PRODUCTION } from '@/config/constants'
-
 /**
  * CSP Header notes:
  * For safe apps we have to allow img-src * and frame-src *
